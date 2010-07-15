@@ -1,0 +1,21 @@
+== Description
+
+This extends the bacon testing framework with useful extensions to disable tests, have before and after
+blocks that run once and more. For examples in the wild, see the tests for
+boson{http://github.com/cldwalker/boson} or bond{http://github.com/cldwalker/bond}.
+
+== Install
+
+Install the gem with:
+
+    sudo gem install bacon-bits
+
+== Usage
+
+Use in tests with:
+
+    require 'bacon/bits'
+    
+== Bugs/Issues
+
+Please report them {on github}[http://github.com/cldwalker/bacon-bits/issues].
