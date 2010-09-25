@@ -30,6 +30,16 @@ module Bacon
       end
     end
   end
+
+  # Inspired by http://gist.github.com/80533
+  module StylishTestUnitOutput
+    include TestUnitOutput
+
+    def handle_requirement(description)
+      error = yield
+      print error.empty? ? "\e[32m✓ \e[m" : "\e[31m✗ \e[m"
+    end
+  end
 end
 
 Bacon::Context.send :include, Bacon::Bits
