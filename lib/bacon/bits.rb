@@ -4,7 +4,7 @@ require 'bacon'
 
 module Bacon
   module Bits
-    VERSION = '0.0.1'
+    VERSION = '0.1.0'
 
     # Will remove this once the latest bacon (which contains this) is released as a gem
     def self.included(mod)
