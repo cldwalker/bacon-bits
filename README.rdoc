@@ -15,6 +15,10 @@ Install the gem with:
 Use in tests with:
 
     require 'bacon/bits'
+
+To use the included StylishTestUnitOuput
+
+    bacon -r bacon/bits -o StylishTestUnit TEST_FILES
     
 == Bugs/Issues
 
