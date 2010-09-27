@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = "gabriel.horner@gmail.com"
   s.homepage    = "http://github.com/cldwalker/bacon-bits"
   s.summary = "Making bacon a little tastier."
-  s.description =  "This extends the bacon testing framework with useful extensions to disable tests, have before and after blocks that run once and more."
+  s.description =  "This extends the bacon testing framework with useful extensions to disable tests, have before and after blocks that run once and more. For examples in the wild, see the tests for boson or bond."
   s.required_rubygems_version = ">= 1.3.6"
   s.rubyforge_project = 'tagaholic'
   s.files = Dir.glob(%w[{lib,test}/**/*.rb bin/* [A-Z]*.{txt,rdoc} ext/**/*.{rb,c} **/deps.rip]) + %w{Rakefile .gemspec}
