@@ -10,10 +10,11 @@ module Bacon
     def self.included(mod)
       mod.module_eval do
         # nested context methods automatically inherit methods from parent contexts
+        undef describe if method_defined? :describe
         def describe(*args, &block)
           context = Bacon::Context.new(args.join(' '), &block)
           (parent_context = self).methods(false).each {|e|
-            class<<context; self end.send(:define_method, e) {|*args| parent_context.send(e, *args)}
+            class<<context; self end.send(:define_method, e) {|*args2| parent_context.send(e, *args2)}
           }
           @before.each { |b| context.before(&b) }
           @after.each { |b| context.after(&b) }
